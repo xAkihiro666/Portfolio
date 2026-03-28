@@ -16,8 +16,8 @@ const profile = [
   },
   {
     label: 'Email',
-    value: 'akihiroakio777@gmail.com',
-    href: 'mailto:akihiroakio777@gmail.com',
+    value: 'judevincent74@yahoo.com',
+    href: 'mailto:judevincent74@yahoo.com',
   },
   {
     label: 'Phone Number',
