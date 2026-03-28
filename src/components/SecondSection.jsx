@@ -204,7 +204,7 @@ function SecondSection() {
                       </div>
                     </button>
 
-                    <div className="absolute inset-x-0 bottom-0 z-20 p-5">
+                    <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 p-5">
                       <div className="mb-4 flex flex-wrap gap-2 md:hidden">
                         {project.stack.map((item) => (
                           <span
