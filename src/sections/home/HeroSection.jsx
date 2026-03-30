@@ -1,13 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
 import { LuMoveRight } from 'react-icons/lu'
-import Socials from './Socials.jsx'
+import ResponsiveLoader from '../../components/ResponsiveLoader.jsx'
+import Socials from '../../components/Socials.jsx'
 
 const initialName = 'Jude Vincent Lutao'
 const finalName = 'Jude Vincent S. Lutao'
 const rewritePrefix = 'Jude Vincent '
 const rewriteSuffix = 'S. Lutao'
 
-function FirstSection() {
+function HeroSection() {
   const sectionRef = useRef(null)
   const [displayName, setDisplayName] = useState(initialName)
 
@@ -87,41 +88,51 @@ function FirstSection() {
       ref={sectionRef}
       className="section-shell first_section flex min-h-[calc(100vh-7rem)] scroll-mt-28 items-center md:scroll-mt-32"
     >
-      <div className="mx-auto flex w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl py-14 sm:py-18 md:py-24">
-          <div
-            className="reveal-item group mb-5 inline-flex cursor-pointer items-center gap-3 text-stone-400"
-            data-reveal
-            style={{ transitionDelay: '120ms' }}
-          >
-            <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-stone-300 transition-colors duration-300 group-hover:border-white/20 group-hover:text-stone-50 sm:h-8 sm:w-8">
-              <LuMoveRight className="text-base sm:text-sm" aria-hidden="true" />
-            </span>
-            <span className="relative h-[1.5rem] overflow-hidden text-[0.92rem] uppercase tracking-[0.22em] sm:h-[1.35rem] sm:text-[0.82rem] sm:tracking-[0.28em]">
-              <span className="flex flex-col transition-transform duration-300 ease-out group-hover:-translate-y-1/2">
-                <span className="h-[1.5rem] sm:h-[1.35rem]">Frontend Developer</span>
-                <span className="h-[1.5rem] text-stone-200 sm:h-[1.35rem]">
-                  Computer Engineering
+      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="grid items-center gap-12 py-14 sm:py-18 md:py-24 lg:grid-cols-[minmax(0,1fr)_minmax(22rem,30rem)] lg:gap-8 xl:grid-cols-[minmax(0,1fr)_32rem]">
+          <div className="max-w-4xl">
+            <div
+              className="reveal-item group mb-5 inline-flex cursor-pointer items-center gap-3 text-stone-400"
+              data-reveal
+              style={{ transitionDelay: '120ms' }}
+            >
+              <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-stone-300 transition-colors duration-300 group-hover:border-white/20 group-hover:text-stone-50 sm:h-8 sm:w-8">
+                <LuMoveRight className="text-base sm:text-sm" aria-hidden="true" />
+              </span>
+              <span className="relative h-[1.5rem] overflow-hidden text-[0.92rem] uppercase tracking-[0.22em] sm:h-[1.35rem] sm:text-[0.82rem] sm:tracking-[0.28em]">
+                <span className="flex flex-col transition-transform duration-300 ease-out group-hover:-translate-y-1/2">
+                  <span className="h-[1.5rem] sm:h-[1.35rem]">Frontend Developer</span>
+                  <span className="h-[1.5rem] text-stone-200 sm:h-[1.35rem]">
+                    Computer Engineering
+                  </span>
                 </span>
               </span>
-            </span>
+            </div>
+            <h1
+              className="reveal-item text-[3.6rem] leading-[0.92] tracking-[-0.07em] text-stone-50 sm:text-6xl md:text-7xl lg:text-[6.25rem]"
+              data-reveal
+              style={{ transitionDelay: '240ms' }}
+            >
+              {displayName}
+              <span className="hero-caret" aria-hidden="true">
+                |
+              </span>
+            </h1>
+            <div
+              className="reveal-item"
+              data-reveal
+              style={{ transitionDelay: '360ms' }}
+            >
+              <Socials />
+            </div>
           </div>
-          <h1
-            className="reveal-item text-[3.6rem] leading-[0.92] tracking-[-0.07em] text-stone-50 sm:text-6xl md:text-7xl lg:text-[6.25rem]"
-            data-reveal
-            style={{ transitionDelay: '240ms' }}
-          >
-            {displayName}
-            <span className="hero-caret" aria-hidden="true">
-              |
-            </span>
-          </h1>
+
           <div
-            className="reveal-item"
+            className="reveal-item flex justify-center lg:justify-end"
             data-reveal
-            style={{ transitionDelay: '360ms' }}
+            style={{ transitionDelay: '300ms' }}
           >
-            <Socials />
+            <ResponsiveLoader />
           </div>
         </div>
       </div>
@@ -129,4 +140,4 @@ function FirstSection() {
   )
 }
 
-export default FirstSection
+export default HeroSection

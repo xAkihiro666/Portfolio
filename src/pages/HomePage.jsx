@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import FirstSection from '../components/FirstSection.jsx'
-import SecondSection from '../components/SecondSection.jsx'
 import SectionNavigator from '../components/SectionNavigator.jsx'
+import HeroSection from '../sections/home/HeroSection.jsx'
+import ProjectsSection from '../sections/home/ProjectsSection.jsx'
 
 const sections = [
   { id: 'home', label: 'Home' },
@@ -56,8 +56,8 @@ function HomePage() {
         onNavigate={handleNavigate}
         sections={sections}
       />
-      <FirstSection />
-      <SecondSection />
+      <HeroSection />
+      <ProjectsSection />
     </>
   )
 }

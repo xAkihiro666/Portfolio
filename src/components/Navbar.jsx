@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { LuX } from 'react-icons/lu'
+import LogoMark from './LogoMark.jsx'
 
 function Navbar({ activeItem, elevated, onNavigate }) {
   const items = [
@@ -69,27 +70,7 @@ function Navbar({ activeItem, elevated, onNavigate }) {
             className="absolute left-1/2 -translate-x-1/2 text-stone-50 transition-opacity duration-200 hover:opacity-80 lg:static lg:translate-x-0"
             aria-label="JVL"
           >
-            <svg
-              width="160"
-              height="60"
-              viewBox="0 0 160 60"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-hidden="true"
-            >
-              <text
-                x="50%"
-                y="45"
-                fill="white"
-                fontFamily="'Poppins', sans-serif"
-                fontWeight="700"
-                fontSize="42"
-                letterSpacing="-6"
-                textAnchor="middle"
-              >
-                JVL
-              </text>
-            </svg>
+            <LogoMark className="h-[60px] w-[160px]" />
           </button>
 
           <div className="h-11 w-11 lg:hidden" aria-hidden="true" />
